@@ -1,0 +1,15 @@
+COPY    START   2000
+FIRST   LDA     FIVE
+**      ADDR    T,S
+**      ADDR    A,B
+**      ADDR    A,S
+**      STA     ALPHA
+**      LDCH    CHARZ
+**      STCH    C1
+**	COMPR   T,X
+ALPHA   RESW    3
+**	TIXR    S,X
+FIVE    WORD    5
+CHARZ   BYTE    C'ZEOF'
+C1      RESB    2
+**      END     **
