@@ -10,4 +10,4 @@ This repository aims to be a valuable resource for understanding, implementing, 
 The repository is organized into folders, each representing a specific component of system software. Here's a brief overview of the main folders:
 
 - *Two Pass Assembler*: Contains  files  pass1.c , input.txt , optab.txt , symbol_table.txt , intermediate_code.txt , pass2.c , assmlist.txt and object_code.txt
-- *Relocatable loader*: Contains  files  ObjectCode.txt and Relocatable.c
+- *Relocatable loader*: Contains  files  ObjectCode.txt  , Modify_object_code.c , relocatable.c , MyObjectCode.txt .  
