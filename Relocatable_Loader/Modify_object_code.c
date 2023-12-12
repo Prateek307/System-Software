@@ -68,7 +68,82 @@ int main()
         text[0] = '\0';
         strcat(text, line);
         int text_size = strlen(text);
-        // printf("new text line is %s\t with length %d\n",text,text_size);
+
+
+        // for header record
+        if(text[0]=='H')
+        {
+            int r = 0;
+            char extra[1000];
+            extra[0] = '\0';
+            int i = 7;
+            while(text[i]!='^')
+            { 
+                extra[r++] = text[i];
+                i++;
+            }
+            extra[r] = '\0';
+            int vval1 = hexaToDec(extra);
+            int vval2 = hexaToDec(a);
+            vval1+=vval2;
+            char convert[1000];
+            convert[0] = '\0';
+            strcpy(convert,decToHexa(vval1,convert));
+            text[7] = '0';
+            text[8] = '0';
+            int z = 9;
+            i = 0;
+             int convert_len = strlen(convert);
+            while(i<convert_len)
+            { 
+                text[z++] = convert[i];
+                i++;
+            }
+        }
+
+
+
+
+
+
+
+
+        // for end record
+        if(text[0]=='E')
+        {
+            int r = 0;
+            char extra[1000];
+            extra[0] = '\0';
+            int i = 2;
+            while(i<text_size)
+            { 
+                extra[r++] = text[i];
+                i++;
+            }
+            extra[r] = '\0';
+            int vval1 = hexaToDec(extra);
+            int vval2 = hexaToDec(a);
+            vval1+=vval2;
+            char convert[1000];
+            convert[0] = '\0';
+            strcpy(convert,decToHexa(vval1,convert));
+            text[0] = '\0';
+            text[0] = 'E';
+            text[1] = '^';
+            text[2] = '0';
+            text[3] = '0';
+            int z = 4;
+            i = 0;
+             int convert_len = strlen(convert);
+            while(i<convert_len)
+            { 
+                text[z++] = convert[i];
+                i++;
+            }
+        }
+
+
+        // for text record
         if(text[0]=='T')
         {
             int i = 0;
