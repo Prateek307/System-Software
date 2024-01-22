@@ -11,4 +11,5 @@ The repository is organized into folders, each representing a specific component
 
 - *Two Pass Assembler*: Contains  files  pass1.c , input.txt , optab.txt , symbol_table.txt , intermediate_code.txt , pass2.c , assmlist.txt and object_code.txt
 - *Relocatable loader*: Contains  files  ObjectCode.txt  , Modify_object_code.c , relocatable.c , MyObjectCode.txt .
-- *loader and Linker*: Contains  files  pass1.c  , pass2.c , INPUT.DAT , ESTAB.DAT , OUTPUT.DAT.  
+- *loader and Linker*: Contains  files  pass1.c  , pass2.c , INPUT.DAT , ESTAB.DAT , OUTPUT.DAT.
+- *Control section independent feature*: run the following command 1.) g++ assembler.cpp -o assembler  2.) ./assembler input.txt
